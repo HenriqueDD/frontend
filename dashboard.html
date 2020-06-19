@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    
+<!---Esse é o Grafico--->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load Charts and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // PESO
+      google.charts.setOnLoadCallback(drawPesoChart);
+
+      // IMC
+      google.charts.setOnLoadCallback(drawImcChart);
+
+      // CALORIAS
+      google.charts.setOnLoadCallback(drawCaloriasChart); 
+
+ 
+       // AGUA
+       google.charts.setOnLoadCallback(drawAguaChart); 
+ 
+ 
+      //PESO
+      function drawPesoChart() {
+
+    
+        var data = new google.visualization.DataTable();
+        var data = google.visualization.arrayToDataTable([
+        ['Day', 'Peso'],
+    ['01/06',  82],
+    ['02/06',  82],
+    ['03/06',  81],
+    ['04/06',  81],
+    ['05/06',  81],
+    ['06/06',  80],
+    ['07/06',  80],
+    ['08/06',  80],
+    ['09/06',  80]
+        ]);
+
+
+        var options = {
+          title: 'Progresso Peso' ,   
+          curveType: 'function',
+          legend: { position: 'bottom' },
+          colors: ['#FF69B4'  ],
+          hAxis: {textStyle: { color: '#F8F8FF'} },
+          vAxis: {textStyle: { color: '#F8F8FF'}},
+          legend: { textStyle: {color: '#F8F8FF'} },
+          titleTextStyle: {color: '#F8F8FF'},
+          backgroundColor: '#23282e', is3D: true,
+          width:741,
+          height:400
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('Peso_chart'));
+        chart.draw(data, options);
+      }
+
+
+
+
+
+
+
+
+
+      // IMC
+      function drawImcChart() {
+
+    
+        var data = google.visualization.arrayToDataTable([
+        ['Day', 'IMC'],
+        ['01/06',  30.94],
+        ['07/06',  30.37]
+        ]);
+
+        var options = {
+          title: 'Progresso IMC' ,
+          curveType: 'function',
+          legend: { position: 'bottom' },
+          colors: ['#8A2BE2'  ],
+          hAxis: {textStyle: { color: '#F8F8FF'} },
+          vAxis: {textStyle: { color: '#F8F8FF'}},
+          legend: { textStyle: {color: '#F8F8FF'} },
+          titleTextStyle: {color: '#F8F8FF'},
+          backgroundColor: '#23282e', is3D: true,
+          width:741,
+          height:400
+
+        };
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.LineChart(document.getElementById('IMC_chart'));
+        chart.draw(data, options);
+      }
+
+
+
+
+
+
+
+      //CALORIAS
+      function drawCaloriasChart() {
+
+    
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'Calorias'],
+          ['01/06',  1061],
+          ['02/06',  1086],
+          ['03/06',  1113],
+          ['04/06',  1020],
+          ['05/06',  1927],
+          ['06/06',  1016],
+          ['07/06',  1104],
+          ['08/06',  1083],
+          ['09/06',  1267]
+          ]);
+
+
+          var options = {
+            title: 'Ingestão Diária de Calorias' ,
+            curveType: 'function',
+            legend: { position: 'bottom' },
+            colors: ['#00FF7F'  ], 
+            hAxis: {textStyle: { color: '#F8F8FF', format: '#,###'} },
+            vAxis: {textStyle: { color: '#F8F8FF'}},
+            legend: { textStyle: {color: '#F8F8FF'} },
+            titleTextStyle: {color: '#F8F8FF'},
+            backgroundColor: '#23282e', is3D: true,
+            width:741,
+            height:400
+          };
+
+var chart = new google.visualization.LineChart(document.getElementById('Caloria_chart'));
+chart.draw(data, options);
+}
+
+
+
+
+      //AGUA
+      function drawAguaChart() {
+
+    
+
+        var data = google.visualization.arrayToDataTable([
+          ['Day', 'Água'],
+      ['01/06',  2000],
+      ['02/06',  1500],
+      ['03/06',  1700],
+      ['04/06',  1800],
+      ['05/06',  1900],
+      ['06/06',  2005],
+      ['07/06',  1000],
+      ['08/06',  1100],
+      ['09/06',  1600]
+          ]);
+
+
+          var options = {
+            title: 'Consumo Diário de Água' ,
+            curveType: 'function',
+            legend: { position: 'bottom' },
+            colors: ['#00BFFF'  ],
+            hAxis: {textStyle: { color: '#F8F8FF'} },
+            vAxis: {textStyle: { color: '#F8F8FF'}},
+            legend: { textStyle: {color: '#F8F8FF'} },
+            titleTextStyle: {color: '#F8F8FF'},
+            backgroundColor: '#23282e', is3D: true,
+            width:741,
+            height:400
+          };
+
+var chart = new google.visualization.LineChart(document.getElementById('Agua_chart'));
+chart.draw(data, options);
+}
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<style type="text/css">
+	
+.nav-side-menu {
+  overflow: auto;
+  font-family: verdana;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: #2e353d;
+  position: fixed;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  color: #e1ffff;
+}
+.nav-side-menu .brand {
+  background-color: #23282e;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+.nav-side-menu .toggle-btn {
+  display: none;
+}
+.nav-side-menu ul,
+.nav-side-menu li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 35px;
+  cursor: pointer;
+  /*    
+    .collapsed{
+       .arrow:before{
+                 font-family: FontAwesome;
+                 content: "\f053";
+                 display: inline-block;
+                 padding-left:10px;
+                 padding-right: 10px;
+                 vertical-align: middle;
+                 float:right;
+            }
+     }
+*/
+}
+.nav-side-menu ul :not(collapsed) .arrow:before,
+.nav-side-menu li :not(collapsed) .arrow:before {
+  font-family: FontAwesome;
+  content: "\f078";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+  float: right;
+}
+.nav-side-menu ul .active,
+.nav-side-menu li .active {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+}
+.nav-side-menu ul .sub-menu li.active,
+.nav-side-menu li .sub-menu li.active {
+  color: #d19b3d;
+}
+.nav-side-menu ul .sub-menu li.active a,
+.nav-side-menu li .sub-menu li.active a {
+  color: #d19b3d;
+}
+.nav-side-menu ul .sub-menu li,
+.nav-side-menu li .sub-menu li {
+  background-color: #181c20;
+  border: none;
+  line-height: 28px;
+  border-bottom: 1px solid #23282e;
+  margin-left: 0px;
+}
+.nav-side-menu ul .sub-menu li:hover,
+.nav-side-menu li .sub-menu li:hover {
+  background-color: #020203;
+}
+.nav-side-menu ul .sub-menu li:before,
+.nav-side-menu li .sub-menu li:before {
+  font-family: FontAwesome;
+  content: "\f105";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.nav-side-menu li {
+  padding-left: 0px;
+  border-left: 3px solid #2e353d;
+  border-bottom: 1px solid #23282e;
+}
+.nav-side-menu li a {
+  text-decoration: none;
+  color: #e1ffff;
+}
+.nav-side-menu li a i {
+  padding-left: 10px;
+  width: 20px;
+  padding-right: 20px;
+}
+.nav-side-menu li:hover {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+@media (max-width: 767px) {
+  .nav-side-menu {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .nav-side-menu .toggle-btn {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10 !important;
+    padding: 3px;
+    background-color: #ffffff;
+    color: #000;
+    width: 40px;
+    text-align: center;
+  }
+  .brand {
+    text-align: left !important;
+    font-size: 22px;
+    padding-left: 20px;
+    line-height: 50px !important;
+  }
+}
+@media (min-width: 767px) {
+  .nav-side-menu .menu-list .menu-content {
+    display: block;
+  }
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.columns{
+  margin: 0 1px 2px 300px; 
+
+}
+
+
+.row{
+  margin: 0 1px 2px 300px; 
+  width:1490px;
+  height:100px;
+  background-color: #23282e;
+  
+
+}
+
+h5{
+    color:#ffffff;
+    text-align: center;
+    
+}
+
+h6{
+    color:#ffffff;
+    text-align: center;
+}
+
+body{
+
+    background-color: #2e353d;
+}
+
+
+
+</style>
+
+
+
+<body>
+
+
+<p></p>
+
+
+    <div class="row" >
+        <div  style="border: 1px solid #ccc" class= "col-sm-3">
+        <p></p><h5 style="color: #FF69B4 ;"> PESO ATUAL</h5>
+        <p></p>
+        <h6> 80,70 kg</h6></div>
+        
+        <div  style="border: 1px solid #ccc" class= "col-sm-3">
+            <p></p><h5 style="color: #8A2BE2 ;"> IMC ATUAL</h5>
+            <p></p>
+            <h6> 30.37</h6></div>
+
+            <div  style="border: 1px solid #ccc" class= "col-sm-3">
+                <p></p><h5 style="color: #00FF7F ;"> CALORIAS (dia)</h5>
+                <p></p>
+                <h6> 1,267cal</h6></div>
+
+                <div  style="border: 1px solid #ccc" class= "col-sm-3">
+                    <p></p><h5 style="color: #00BFFF ;"> ÁGUA (dia)</h5>
+                    <p></p>
+                    <h6> 1,6L</h6></div>
+
+      </div>
+<br/>
+
+<!---Essa é a table do Grafico--->
+
+<!--Table and divs that hold the pie charts-->
+<table class="columns" >
+  <tr> 
+    <td><div id="Peso_chart" style="border: 1px solid #ccc"></div></td>
+    <td><div id="IMC_chart" style="border: 1px solid #ccc"></div></td>
+
+  </tr>
+  <tr>
+    <td><div id="Caloria_chart" style="border: 1px solid #ccc"></div></td>
+    <td><div id="Agua_chart" style="border: 1px solid #ccc"></div></td>
+  </tr>
+</table>
+
+<!---<div id="curve_chart" style="width: 1500px; height: 800px; right: : 1100px; padding: 200px;"></div>--->
+
+
+
+
+
+<div class="nav-side-menu"  style="border: 1px solid #ccc">
+    <div class="brand">Health Track</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                  </a>
+                </li>
+
+                <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                  <a href="#"><i class="fa fa-gift fa-lg"></i> Acompanhar Atividades <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li class="active"><a href="#">Minha Lista</a></li>
+                    <li><a href="#">Peso</a></li>
+                    <li><a href="#">Altura</a></li>
+                    <li><a href="#">IMC</a></li>
+                    <li><a href="#">Alimentos</a></li>
+                    <li><a href="#">Calorias</a></li>
+                    <li><a href="#">Consumo Água</a></li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a href="#"><i class="fa fa-globe fa-lg"></i>Adicionar <span class="arrow"></span></a>
+                </li>  
+                <ul class="sub-menu collapse" id="service">
+                  <li>Peso</li>
+                  <li>Altura</li>
+                  <li>Alimento</li>
+                  <li>Calorias</li>
+                  <li>Consumo Água</li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#"><i class="fa fa-car fa-lg"></i> Frenquancia Cardiaca <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li>Segunda-Feira</li>
+                  <li>Terça-Feira</li>
+                  <li>Quarta-Feira</li>
+                  <li>Quinta-Feira</li>
+                  <li>Sexta-Feira</li>
+                  <li>Sábado</li>
+                  <li>Domingo</li>
+                </ul>
+
+
+                 <li>
+                  <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Dietas
+                  </a>
+                  </li>
+
+                 <li>
+                  <a href="#">
+                  <i class="fa fa-users fa-lg"></i> Notificações
+                  </a>
+                </li>
+            </ul>
+     </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>
